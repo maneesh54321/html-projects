@@ -1,0 +1,307 @@
+/* @import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700'); */
+@import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:300,400,700,800');
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    background-color: #fff;
+    font-size: 20px;
+    color:#2c3e50;
+    font-weight: 300;
+    /* font-family: 'Fira Sans', sans-serif; */
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+.clearfix {
+    zoom:1;
+}
+.clearfix::after{
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.row {
+    max-width:1140px;
+    margin: 0 auto;
+}
+
+.btn:link,
+.btn:visited{
+    display: inline-block;
+    padding:7px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size:75%;
+    font-weight: 400;    
+    color: #fff;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited{
+    border: 2px solid #2980b9;
+    color: #2980b9;
+    transition: all 0.2s;
+}
+.btn-ghost:hover,
+.btn-ghost:active{
+    background-color: #2980b9;
+    color: #fff;
+}
+
+.btn-solid:link,
+.btn-solid:visited{
+    background-color:#8e44ad;
+    transition: all 0.2s;
+}
+.btn-solid:hover,
+.btn-solid:active{
+    background-color: #2980b9;
+}
+
+h1,
+h2,
+h3,
+h4{
+    font-weight: 300;
+}
+
+h2,
+h4{
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 200%;
+}
+
+h2 {
+    font-size: 180%;
+    text-align: center;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+h2:after{
+    display: block;
+    background-color: #2980b9;
+    content: " ";
+    height:2px;
+    width:100px;
+    margin:0 auto;
+}
+
+h3 {
+    color: #2980b9;
+}
+
+section{
+    padding:40px 0;
+}
+
+.long-copy{
+    font-size:75%;
+    font-weight: 400;
+    margin: 10px 0;
+    text-align: center;
+}
+
+/*----------------------------------------*/
+/*----------------Header------------------*/
+/*----------------------------------------*/
+
+header{
+    height: 100vh;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url('img/slide3.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav .logo{
+    float: left;
+    margin-top: 20px; 
+}
+
+nav ul{
+    list-style:none;
+    float: right;
+    margin-top:20px;
+}
+
+nav ul li{
+    display: inline-block;
+    margin-left:15px;
+}
+
+nav ul a:link,
+nav ul a:visited{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-size:80%;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+}
+nav ul a:hover,
+nav ul a:active{
+    border-bottom:2px solid #2980b9;
+}
+
+.banner{
+    position: absolute;
+    width: 1140px;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+.banner h1{
+    color: #fff;
+}
+
+/*----------------------------------------*/
+/*----------------Tarrifs-----------------*/
+/*----------------------------------------*/
+
+.section-tarrif{
+    background-image: url('img/banner_one.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.section-tarrif h2{
+    color:#fff;
+}
+
+.tarrrifs{
+    margin:20px 0;
+}
+
+.box{
+    background-color: #fff;
+    border-bottom:5px solid #2980b9;
+}
+
+.bedroom-photo{
+    overflow: hidden;
+}
+
+.bedroom-photo img{
+    width:100%;
+    height:auto;
+    transform: scale(1.25);
+    transition: transform 0.5s;
+}
+.bedroom-photo img:hover{
+    transform: scale(1.08);
+}
+
+.box .plan{
+    position: relative;
+    background-color: #2980b9;
+    color: #fff;
+    padding:10px 0;
+    text-align: center;
+    font-weight: 300;
+    z-index: 999;
+}
+
+.box .plan::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #20638f;
+    content: '';
+    transition: height 0.5s;
+}
+
+.box .plan:hover.plan::before{
+    opacity:0.5;
+    height:100%;
+}
+
+.price{
+    padding:10px 0;
+    text-align: center;
+    font-weight: 400;
+    border-bottom: 1px solid rgb(173, 173, 173);
+}
+
+.details{
+    text-align: center;
+}
+
+.details p{
+    font-size: 60%;
+    font-weight: 400;
+    margin:10px;
+}
+
+.details a{
+    margin:10px 0;
+}
+
+/*----------------------------------------*/
+/*---------Houseboat Packages-------------*/
+/*----------------------------------------*/
+
+.section-hb-packages .box{
+    padding: 3px;
+    box-shadow:0px 3px 6px 2px rgb(206, 206, 206);
+    border-bottom: none;
+}
+
+.section-hb-packages .details p{
+    margin:25px;
+}
+
+.section-hb-packages .box:first-child,
+.section-hb-packages .box:last-child{
+    margin-top:60px;
+}
+
+.section-hb-packages .box:first-child .details p,
+.section-hb-packages .box:last-child .details p{
+    margin:10px;
+}
+
+.nightBedroom{
+    width:100%;
+    overflow: hidden;
+}
+
+.nightBedroom img{
+    width:100%; 
+    transform: scale(1.1);
+    transition: transform 0.5s;
+}
+
+.nightBedroom img:hover{
+    transform: scale(1.3);
+}
+
+.section-hb-packages .box .plan{
+    background-color: #8e44ad;
+    padding: 15px;
+}
+
+.section-hb-packages .details a{
+    margin:10px 0 0 0;
+    width:100%;
+}
+
+.section-hb-packages .btn{
+    padding:12px 15px;
+}
+
+.section-hb-packages .btn:hover,
+.section-hb-packages .btn:active{
+    background-color:#703688;
+}

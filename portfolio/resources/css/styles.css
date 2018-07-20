@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Muli', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: #dcdde1;
+}
+
+section {
+    padding: 20px 0;
+}
+
+h2 {
+    font-size: 1.7rem;
+    font-weight: 400;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 1.5rem;
+    text-align: center;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    text-transform: uppercase;
+}
+
+h3:after {
+    display: block;
+    background-color:#c23616;    
+    content: " ";
+    width:100px;
+    height: 2px;
+    margin: 10px auto;
+}
+
+h4 {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.clearfix {zoom: 1;}
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.center-align{
+    text-align: center;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    color:#dcdde1;
+    transition: border-bottom 0.2s, color 0.2s;
+    padding-bottom: 2px;
+}
+
+a:hover,
+a:active {
+    border-bottom: 1px solid #c23616;
+}
+
+header {
+    background: url('img/header_bg.jpg');
+    background-size: cover;
+    height: 100vh;
+}
+
+#logo {
+    float: left;
+    margin-top: 10px;
+    color: #c23616;
+}
+
+ul#main-nav{
+    float: right;
+    list-style: none;
+    margin-top: 15px;
+}
+
+ul#main-nav li {
+    margin-right: 15px;
+    display: inline-block;
+}
+
+.hero-text-box {
+    width: 200px;
+    height:200px;
+    background-color: #c23616;
+    border-radius: 50%;
+    position: relative;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    padding: 40px 20px;
+    box-shadow: 0px 0px 6px 4px black;
+}
+
+.greeting:after {
+    display: block;
+    height: 2px;
+    background-color: #192a56;
+    content: " ";
+    width: 100px;
+    margin: 10px auto;
+}
+
+
+/* About me section */
+.aboutme {
+    color:#7a7a7a;
+}
+
+.profile-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+/* Technologies section */
+.technologies{
+    background-color: #ececec;
+    color: #7a7a7a;
+}
+
+.tech-box {
+    margin:20px 0 0 40px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 90px auto;
+}
+
+.tech-icon {
+    color: #c23616;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    background-color: #192a56;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    padding: 20px 0;
+}
+
+.tech-skills-list {
+    margin-top: 20px;
+    list-style: none;
+}
+
+.tech-skills-list li {
+    margin:10px 0 0 20px;
+}
+
+.tech-name {
+    padding-top: 10px;
+}

@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css?family=Harmattan');
+@import url('https://fonts.googleapis.com/css?family=Secular+One');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+@import url('../components/buttons.css');
+@import url('../components/card.css');
+
+body{
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar{
+    width:2px;
+}
+::-webkit-scrollbar-track{
+    -webkit-border-radius:0;
+    border-radius:0;
+    padding:0 1px;
+    background:#333;
+}
+::-webkit-scrollbar-thumb{
+    -webkit-border-radius:0;
+    border-radius:0;
+    width:1px;
+    background:#aaa
+}
+::-webkit-scrollbar-thumb:window-inactive{
+    background:#3498db
+}.formerrors{
+    position:absolute;
+    z-index:700;
+    height:auto;
+    width:auto;
+    padding:8px 10px;
+    background:#FB361C;
+    -moz-border-radius:5px;
+    border-radius:5px;
+    box-shadow:0 2px 5px rgba(50,50,50,.3);
+    moz-box-shadow:0 2px 5px rgba(50,50,50,.3);
+    -webkit-box-shadow:0 2px 5px rgba(50,50,50,.3);
+    font-size:13px;color:#fff
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,h2,h3,h4,h5{
+    font-weight:700;
+    margin: 0 0 1rem;
+}
+
+.border-box{
+    box-sizing: border-box;
+}
+
+.leftalign{
+    text-align: left;
+}
+
+.centeralign {
+    text-align: center;
+}
+
+.rightalign{
+    text-align: left;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute{
+    position: absolute;
+}
+
+.bgWhite1{
+    background: #f2f2f2;
+}
+
+.bgWhite{
+    background:white;
+}
+
+.whitespan{
+    color: white;
+}
+
+.blackspan{
+    color: black;
+}
+
+.greyspan{
+    color: grey;
+}
+
+.weight700{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.weight900{
+    font-family: 'Secular One', sans-serif;
+}
+
+.weight500{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.shadow-text {
+    text-shadow: 0 3px 1px rgba(0,0,0,.1);
+}
+
+.top-bar{
+    padding:0 5% 0;
+    height:60px;
+    z-index: 850;
+    width:100%;
+}
+
+.top-bar.transparent .logo{
+    background:url('../images/logo5mono_100.png') left top no-repeat;
+    margin: 20px 0 0 0;
+    height: 30px;
+    float: left;
+    width: 110px;
+    background-size: auto 25px;
+}
+
+.top-bar ul{
+    list-style: none;
+    float: right;
+    margin: 0px;
+}
+.top-bar ul li{
+    display: inline-block;
+    height:60px;
+}
+
+.top-bar.transparent ul li a{
+    line-height: 60px;
+    font-family: 'Harmattan', sans-serif;
+    font-weight: bolder;
+    font-size:24px;
+    color: white;
+    margin:0 0 0 20px;
+}
+
+.page-body{
+    width: 100%;
+    background:linear-gradient(45deg,rgba(98,94,177,1),rgba(85,134,198,.97) 50%,rgba(34,225,255,.7)),url('../images/bg1.jpg') no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 90vh;
+}
+
+.hello-header{
+    width: 100%;
+    height: 100%;
+    height:calc(90vh - 120px);
+}
+
+.hello-header>div{
+    width: 100%;
+    height: 100%;
+}
+
+.hello-header>div>div{
+    width: 100%;
+    height: 100%;
+    padding:0 5%;
+}
+
+.hello-header .heading{
+    max-width: 80%;
+    height: 100%;
+    margin:auto;
+    margin-left: 0;    
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.hello-header .heading .heading-content{
+   margin:auto;
+   margin-left:0;
+}
+
+.hello-header h1{
+    font-size: 3rem;
+    line-height: 3.5rem;
+}
+
+.hello-header h2{
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    margin-bottom: 0;
+}
+
+.hello-header h2+h2{
+    margin-bottom: 2rem;
+}
+
+.hello_why_outer{
+    width: 100%;
+    height:1500px;
+}
+
+.hello_why{
+    width:100%;
+}
+
+.hello_why>div{
+    width:90%;
+    max-width: 90%;
+    margin: auto;
+    height: auto;
+}
+
+.hello_why .heading{
+    padding-top:50px;
+    width:70%;
+    margin:auto;
+}
+.hello_why .heading h1{
+    font-size: 2.3rem;
+    line-height: 2.6rem;
+}
+.hello_why .heading h2{
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+}
