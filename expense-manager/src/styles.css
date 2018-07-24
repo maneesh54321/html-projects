@@ -1,0 +1,120 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,500,700');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Work Sans','Arial', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+input, select, textarea, button{font-family:inherit;}
+
+h1,h2,h3,h4,h5 {
+    color: #6D214F;
+}
+
+html, body {
+    height: 100%;
+}
+
+.center-align {
+    text-align:center;
+}
+
+.full-width{
+    width:100%;
+}
+
+.tiny-text {
+    font-size:0.75rem;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.mt-5 {
+    margin-top:5px;
+}
+
+/* Buttons */
+
+.btn:link,
+.btn:visited,
+input[type="submit"] {
+    display: inline-block;
+    padding: 10px 30px;
+    text-decoration: none;
+    border-radius:10px;
+    transition: background-color 0.2s,border 0.2s, color 0.2s;
+}
+
+.btn-full:link,
+.btn-full:visited,
+input[type="submit"] {
+    background-color: #6D214F;
+    border: 1px solid #BDC581;
+    color:#BDC581;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited{
+    border:1px solid #f7f1e3;
+    background-color: #fdcb6e;
+    color: #2d3436;
+}
+
+.btn:hover,
+.btn:active,
+input[type="submit"]:hover,
+input[type="submit"]:active {
+    background-color: #461533;
+    color: #BDC581;
+    border: 1px solid#BDC581;
+}
+
+.btn-full:hover,
+.btn-full:active {
+    background-color:#f7f1e3;
+}
+
+.btn-ghost:active,
+.btn-ghost:hover {
+    background-color: #40407a;
+    color:#f7f1e3;
+}
+
+.textbox {
+    border: 1px solid #6D214F;
+    border-radius: 10px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+}
+
+/* Input Fields */
+input {
+    outline: none;
+    padding: 10px 10px;
+    border-radius: 10px;
+    color: #6D214F;
+    border: 1px solid #6D214F;
+}
+
+/* Input group */
+
+.textbox fa{
+    flex: 0 0 20px;
+}
+
+.textbox input{
+    border: none !important;
+    background: none !important;
+    flex: 1 0 auto;
+}
