@@ -32,9 +32,9 @@ h3 {
 
 h3:after {
     display: block;
-    background-color:#c23616;    
+    background-color: #c23616;
     content: " ";
-    width:100px;
+    width: 100px;
     height: 2px;
     margin: 10px auto;
 }
@@ -44,7 +44,10 @@ h4 {
     font-size: 1.1rem;
 }
 
-.clearfix {zoom: 1;}
+.clearfix {
+    zoom: 1;
+}
+
 .clearfix:after {
     content: '.';
     clear: both;
@@ -58,14 +61,14 @@ h4 {
     margin: 0 auto;
 }
 
-.center-align{
+.center-align {
     text-align: center;
 }
 
 a:link,
 a:visited {
     text-decoration: none;
-    color:#dcdde1;
+    color: #dcdde1;
     transition: border-bottom 0.2s, color 0.2s;
     padding-bottom: 2px;
 }
@@ -87,7 +90,7 @@ header {
     color: #c23616;
 }
 
-ul#main-nav{
+ul#main-nav {
     float: right;
     list-style: none;
     margin-top: 15px;
@@ -100,13 +103,13 @@ ul#main-nav li {
 
 .hero-text-box {
     width: 200px;
-    height:200px;
+    height: 200px;
     background-color: #c23616;
     border-radius: 50%;
     position: relative;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     padding: 40px 20px;
     box-shadow: 0px 0px 6px 4px black;
 }
@@ -123,7 +126,7 @@ ul#main-nav li {
 
 /* About me section */
 .aboutme {
-    color:#7a7a7a;
+    color: #7a7a7a;
 }
 
 .profile-photo {
@@ -132,14 +135,76 @@ ul#main-nav li {
     border-radius: 50%;
 }
 
+/* Timeline */
+.timeline {
+    list-style: none;
+}
+
+.timeline li {
+    padding: 20px;
+}
+
+.timeline li .timestamp::after {
+    content: ' ';
+    background-color: #c23616;
+    height: 3px;
+    margin-top: 10px;
+    width: 20px;
+    display: block;
+}
+
+/* Education Section */
+.education {
+    color: #7a7a7a;
+    background-color: #ececec;
+}
+
+.education .timeline li {
+    border-left: 5px solid #a5a5a596;
+}
+
+.education .timeline .content {
+    padding-left: 100px;
+}
+
+/* Career Section */
+.career {
+    color: #7a7a7a;
+}
+
+.career .timeline li {
+    border-right: 5px solid #a5a5a596;
+}
+
+.career ul li {
+    text-align: right;
+}
+
+.career ul li.project{
+    text-align: left;
+}
+
+.career .timeline li .timestamp::after {
+    content: ' ';
+    background-color: #c23616;
+    height: 3px;
+    margin:10px 0 0 auto;
+    width: 20px;
+    display: block;
+}
+
+.career .timeline .content {
+    padding-right: 100px;
+}
+
 /* Technologies section */
-.technologies{
+.technologies {
     background-color: #ececec;
     color: #7a7a7a;
 }
 
 .tech-box {
-    margin:20px 0 0 40px;
+    margin: 20px 0 0 40px;
 }
 
 .grid-container {
@@ -164,7 +229,7 @@ ul#main-nav li {
 }
 
 .tech-skills-list li {
-    margin:10px 0 0 20px;
+    margin: 10px 0 0 20px;
 }
 
 .tech-name {
