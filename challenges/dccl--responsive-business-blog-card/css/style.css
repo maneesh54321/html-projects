@@ -1,0 +1,89 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 128rem;
+  margin: 0 auto;
+}
+
+.card {
+  width: 36.8rem;
+  box-shadow: 0px 8px 33px 32px rgb(0 0 0 / 3%);
+  margin: 16.4rem auto;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+header {
+  position: relative;
+}
+
+.card-hero-img {
+  width: 100%;
+}
+
+.img-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.section-text {
+  margin-bottom: 2.4rem;
+  padding: 0 2.4rem;
+}
+
+.card-title {
+  font-size: 2.2rem;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  margin-bottom: 2rem;
+}
+
+.card-text {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #888;
+}
+
+.footer {
+  border-top: 1px solid #eee;
+  padding: 2.4rem;
+}
+
+.author {
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+}
+
+.author-avatar {
+  border: 3px solid #eee;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+}
+
+.author-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.author-work {
+  font-size: 1rem;
+  font-weight: 500;
+}

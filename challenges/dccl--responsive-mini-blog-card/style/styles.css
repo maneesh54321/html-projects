@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Sora", system-ui;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.card {
+  width: 36.8rem;
+  margin: 16.4rem auto;
+  box-shadow: 0px 9px 55px 8px rgb(17 23 41 / 11%);
+  border-radius: 10px;
+}
+
+.card-body {
+  padding: 1.6rem;
+}
+
+.card-img {
+  width: 100%;
+  margin-bottom: 1.6rem;
+  border-radius: 10px;
+}
+
+.tags {
+  margin-bottom: 1.6rem;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.6rem 1.6rem;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #883ae1;
+
+  background-color: #e6d6fc;
+  border-radius: 10rem;
+}
+
+.card-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #20293a;
+  margin-bottom: 0.6rem;
+}
+
+.card-text {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #6c727f;
+}
+
+.card-author {
+  font-size: 1.2rem;
+  border-top: 1px solid #e5eaf0;
+  padding: 2rem 1.6rem 2rem 1.6rem;
+}
