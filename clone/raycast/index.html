@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Raycast</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navigation">
+            <ul class="navs">
+                <li class="home">
+                    <a href="#">
+                        <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 48 48" class="Navbar_logo__ycYQk">
+                            <path fill="#FF6363" fill-rule="evenodd"
+                                d="M12 30.99V36L-.01 23.99l2.516-2.499zM17.01 36H12l12.011 12.01 2.506-2.505zm28.487-9.497L48 24 24 0l-2.503 2.503L30.98 12h-5.732l-6.62-6.614-2.506 2.503 4.122 4.122h-2.869v18.625H36V27.77l4.122 4.122 2.503-2.506L36 22.747v-5.732zM13.253 10.747l-2.503 2.506 2.686 2.686 2.503-2.506zm21.314 21.314-2.495 2.503 2.686 2.686 2.506-2.503zM7.878 16.121l-2.503 2.504L12 25.253v-5.012zM27.756 36h-5.009l6.628 6.625 2.503-2.503z"
+                                clip-rule="evenodd"></path>
+                        </svg> -->
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 93 24" class="brand">
+                            <g clip-path="url(#logo-full_svg__a)">
+                                <path fill="#FF6363" fill-rule="evenodd"
+                                    d="M6 15.491v2.504l-6-6 1.251-1.251zm2.504 2.504H6l6 6 1.251-1.251zm14.24-4.747 1.253-1.253-12-12-1.25 1.256 4.747 4.747h-2.868L9.312 2.691 8.061 3.942l2.06 2.061h-1.44v9.314h9.314v-1.44l2.061 2.06 1.251-1.25-3.312-3.314v-2.87zM6.626 5.374 5.37 6.627 6.714 7.97l1.252-1.252zM17.282 16.03l-1.252 1.253 1.343 1.344 1.253-1.253zM3.939 8.06 2.686 9.315 6 12.627v-2.506zM13.88 18h-2.506l3.313 3.314 1.253-1.253z"
+                                    clip-rule="evenodd"></path>
+                                <path fill="#E6E6E6"
+                                    d="M90.987 17.98q-1.214 0-1.89-.659-.678-.661-.678-1.825v-4.8h-1.45V8.899h1.458l.26-2.4h1.707v2.4h2.227v1.8h-2.227v4.538a.95.95 0 0 0 .256.667.88.88 0 0 0 .68.278h1.29v1.799zM82.268 18.15q-1.616 0-2.6-.77a3.45 3.45 0 0 1-1.259-2.049h2.143c.093.312.301.577.582.742.344.199.737.296 1.134.28 1.143 0 1.717-.32 1.717-.937q0-.462-.539-.706a6 6 0 0 0-1.302-.389 16 16 0 0 1-1.538-.376 2.67 2.67 0 0 1-1.314-.875q-.535-.64-.537-1.681a2.38 2.38 0 0 1 .905-1.903q.909-.758 2.52-.757c1.074 0 1.92.24 2.56.719a3.22 3.22 0 0 1 1.215 1.94h-2.146q-.343-.857-1.624-.857-1.374 0-1.373.86a.74.74 0 0 0 .386.64c.293.18.62.296.96.345q.64.109 1.26.291.645.184 1.26.451c.399.181.737.475.971.845.272.435.407.942.389 1.455a2.4 2.4 0 0 1-.96 1.974q-.959.756-2.81.758M75.88 9.636q-.991-.89-2.773-.89-1.425 0-2.386.766a3.6 3.6 0 0 0-1.28 1.979h2.026c.103-.297.3-.553.56-.728a1.8 1.8 0 0 1 1.072-.303 1.92 1.92 0 0 1 1.317.427 1.51 1.51 0 0 1 .48 1.197v.436h-2.31q-1.607 0-2.514.8a2.59 2.59 0 0 0-.907 2.019 2.66 2.66 0 0 0 .844 2.033q.845.8 2.24.8a3.4 3.4 0 0 0 1.658-.385c.411-.2.759-.51 1.005-.896h.083l.16 1.12h1.715v-5.92q.002-1.56-.99-2.455m-.975 4.852a1.83 1.83 0 0 1-.6 1.44q-.595.53-1.627.53-.751 0-1.149-.34a1.08 1.08 0 0 1-.4-.866c0-.8.523-1.197 1.55-1.197h2.226zM64.021 18.17q-1.95 0-3.117-1.252-1.166-1.25-1.168-3.462c0-1.476.39-2.624 1.164-3.46q1.162-1.251 3.121-1.25 1.59 0 2.637.849a4 4 0 0 1 1.389 2.147h-1.965a2.2 2.2 0 0 0-2.06-1.197 2.08 2.08 0 0 0-1.683.76q-.64.764-.64 2.15 0 1.388.64 2.153a2.08 2.08 0 0 0 1.682.763 2.21 2.21 0 0 0 2.06-1.2h1.966a4.03 4.03 0 0 1-1.39 2.15q-1.041.848-2.636.848M52.43 21.432l1.371-3.43-3.683-9.082h2.143l2.486 6.427h.082l2.49-6.427h2.142l-4.975 12.512zM48.267 9.636q-.99-.89-2.774-.89-1.423 0-2.386.766a3.57 3.57 0 0 0-1.27 1.979h2.024c.103-.297.299-.553.56-.728a1.8 1.8 0 0 1 1.072-.303q.835 0 1.316.427a1.5 1.5 0 0 1 .48 1.197v.436h-2.32q-1.6 0-2.513.8a2.59 2.59 0 0 0-.909 2.019 2.66 2.66 0 0 0 .845 2.025q.845.8 2.24.8a3.4 3.4 0 0 0 1.656-.385c.412-.2.76-.51 1.006-.896h.082l.17 1.12h1.712v-5.92q0-1.552-.99-2.447m-.978 4.852a1.83 1.83 0 0 1-.6 1.44q-.595.53-1.628.53-.751 0-1.15-.34a1.09 1.09 0 0 1-.4-.866q.01-1.194 1.55-1.197h2.228zM37.152 13.456q.46-.122.88-.346.49-.268.909-.64c.336-.31.595-.693.757-1.12.194-.502.29-1.036.283-1.574q0-1.714-1.094-2.746-1.096-1.032-2.848-1.027h-4.972v12h2.143v-4.454h1.625L37.923 18h2.4zM33.21 11.65v-3.76h2.654c.608 0 1.088.16 1.44.494.352.335.531.792.531 1.386q0 .892-.534 1.389c-.392.34-.9.517-1.42.491z">
+                                </path>
+                            </g>
+                            <defs>
+                                <clipPath id="logo-full_svg__a">
+                                    <path fill="#fff" d="M0 0h92.622v24H0z"></path>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                </li>
+                <li class="nav">
+                    <a href="#" class="nav-link">Store</a>
+                </li>
+                <li class="nav">
+                    <a href="#" class="nav-link">Pro</a>
+                </li>
+                <li class="nav">
+                    <a href="#" class="nav-link">Teams</a>
+                </li>
+                <li class="nav">
+                    <a href="#" class="nav-link">Developers</a>
+                </li>
+                <li class="nav">
+                    <a href="#" class="nav-link">Changelog</a>
+                </li>
+                <li class="nav">
+                    <a href="#" class="nav-link">Blog</a>
+                </li>
+                <li class="nav">
+                    <a href="#" class="nav-link">Pricing</a>
+                </li>
+                <li class="nav login">
+                    <a href="#" class="nav-link">Login</a>
+                </li>
+                <li class="download-btn">
+                    <button>
+                        <svg class="download-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
+                            <path fill="currentColor"
+                                d="M12.665 15.358c-.905.844-1.893.711-2.843.311-1.006-.409-1.93-.427-2.991 0-1.33.551-2.03.391-2.825-.31C-.498 10.886.166 4.078 5.28 3.83c1.246.062 2.114.657 2.843.71 1.09-.213 2.133-.826 3.296-.746 1.393.107 2.446.64 3.138 1.6-2.88 1.662-2.197 5.315.443 6.337-.526 1.333-1.21 2.657-2.345 3.635zM8.03 3.778C7.892 1.794 9.563.16 11.483 0c.268 2.293-2.16 4-3.452 3.777">
+                            </path>
+                        </svg>
+                        <span class="dowload-text">Download</span>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero-section text-center">
+        <div class="hero-text-box">
+            <h1 class="primary-heading">
+                Help us make work frictionless
+            </h1>
+            <p class="section-text">
+                Join our growing and fully-remote team at Raycast, and empower people to supercharge their productivity.
+            </p>
+            <a href="#" class="hero-btn">
+                See open positions
+            </a>
+        </div>
+    </section>
+    <section class="section mb-lg">
+        <div class="section-heading text-center mb-md">
+            <h2 class="secondary-heading">Our values</h2>
+            <p class="section-text">
+                Applying our values is what helps us thrive, enjoy what we do, and ship our best work.
+            </p>
+        </div>
+        <ul class="values container">
+            <li class="value-card">
+                <p class="value-card-heading">Speed</p>
+                <p class="value-card-text">We get things done and have a bias towards action. We run a marathon and not
+                    a sprint. Though it's still a race.</p>
+            </li>
+            <li class="value-card">
+                <p class="value-card-heading">Speed</p>
+                <p class="value-card-text">We get things done and have a bias towards action. We run a marathon and not
+                    a sprint. Though it's still a race.</p>
+            </li>
+            <li class="value-card">
+                <p class="value-card-heading">Speed</p>
+                <p class="value-card-text">We get things done and have a bias towards action. We run a marathon and not
+                    a sprint. Though it's still a race.</p>
+            </li>
+            <li class="value-card">
+                <p class="value-card-heading">Speed</p>
+                <p class="value-card-text">We get things done and have a bias towards action. We run a marathon and not
+                    a sprint. Though it's still a race.</p>
+            </li>
+            <li class="value-card">
+                <p class="value-card-heading">Speed</p>
+                <p class="value-card-text">We get things done and have a bias towards action. We run a marathon and not
+                    a sprint. Though it's still a race.</p>
+            </li>
+            <li class="value-card">
+                <p class="value-card-heading">Speed</p>
+                <p class="value-card-text">We get things done and have a bias towards action. We run a marathon and not
+                    a sprint. Though it's still a race.</p>
+            </li>
+        </ul>
+    </section>
+    <section class="section mb-lg">
+        <div class="section-heading text-center mb-md">
+            <h2 class="secondary-heading">Team</h2>
+            <p class="section-text">
+                We’re a team who previously helped build products for millions of people across the internet at Spotify,
+                Facebook, Zoho, Google, HackerOne, Rainbow, and more.
+            </p>
+        </div>
+        <div class="team-members container-md">
+            <div class="employee">
+                <div class="employee-initials employee-initials--ma">MA</div>
+                <div class="employee-details">
+                    <p class="employee-full-name">Milena Araujo</p>
+                    <p class="employee-designation">Community Engineer</p>
+                    <p class="employee-intro employee-intro--1">Previously a Web Engineer at Spotify.</p>
+                    <p class="employee-intro">Passionate about stationery and mechanical keyboards.</p>
+                </div>
+            </div>
+            <div class="employee">
+                <div class="employee-initials employee-initials--pd">PD</div>
+                <div class="employee-details">
+                    <p class="employee-full-name">Pedro Duarte</p>
+                    <p class="employee-designation">Hype Lead</p>
+                    <p class="employee-intro employee-intro--1">Previously helped create Radix, Stitches, and
+                        RainbowKit.</p>
+                    <p class="employee-intro">Used to play harmonica in a Rockabilly band.</p>
+                </div>
+            </div>
+            <div class="employee">
+                <div class="employee-initials employee-initials--ma">JB</div>
+                <div class="employee-details">
+                    <p class="employee-full-name">John Buckley</p>
+                    <p class="employee-designation">Software Engineer</p>
+                    <p class="employee-intro employee-intro--1">Previously a Software Engineer at Colortrix, Olive Toast
+                        Software, and Crocodile Clips..</p>
+                    <p class="employee-intro">Cannot go a single day without marmalade..</p>
+                </div>
+            </div>
+            <div class="employee">
+                <div class="employee-initials employee-initials--sm">SM</div>
+                <div class="employee-details">
+                    <p class="employee-full-name">Sorin Muntean</p>
+                    <p class="employee-designation">Software Engineer</p>
+                    <p class="employee-intro employee-intro--1">Previously a Software Engineer at Ottonova, and
+                        Internations.org.</p>
+                    <p class="employee-intro">Used to drive an ambulance for the Red Cross.</p>
+                </div>
+            </div>
+            <div class="employee">
+                <div class="employee-initials employee-initials--ma">MA</div>
+                <div class="employee-details">
+                    <p class="employee-full-name">Milena Araujo</p>
+                    <p class="employee-designation">Community Engineer</p>
+                    <p class="employee-intro employee-intro--1">Previously a Web Engineer at Spotify.</p>
+                    <p class="employee-intro">Passionate about stationery and mechanical keyboards.</p>
+                </div>
+            </div>
+            <div class="employee">
+                <div class="employee-initials employee-initials--pd">PD</div>
+                <div class="employee-details">
+                    <p class="employee-full-name">Pedro Duarte</p>
+                    <p class="employee-designation">Hype Lead</p>
+                    <p class="employee-intro employee-intro--1">Previously helped create Radix, Stitches, and
+                        RainbowKit.</p>
+                    <p class="employee-intro">Used to play harmonica in a Rockabilly band.</p>
+                </div>
+            </div>
+            <div class="employee">
+                <div class="employee-initials employee-initials--ma">JB</div>
+                <div class="employee-details">
+                    <p class="employee-full-name">John Buckley</p>
+                    <p class="employee-designation">Software Engineer</p>
+                    <p class="employee-intro employee-intro--1">Previously a Software Engineer at Colortrix, Olive Toast
+                        Software, and Crocodile Clips..</p>
+                    <p class="employee-intro">Cannot go a single day without marmalade..</p>
+                </div>
+            </div>
+            <div class="employee">
+                <div class="employee-initials employee-initials--sm">SM</div>
+                <div class="employee-details">
+                    <p class="employee-full-name">Sorin Muntean</p>
+                    <p class="employee-designation">Software Engineer</p>
+                    <p class="employee-intro employee-intro--1">Previously a Software Engineer at Ottonova, and
+                        Internations.org.</p>
+                    <p class="employee-intro">Used to drive an ambulance for the Red Cross.</p>
+                </div>
+            </div>
+            <div class="employee">
+                <div class="employee-initials employee-initials--ma">MA</div>
+                <div class="employee-details">
+                    <p class="employee-full-name">Milena Araujo</p>
+                    <p class="employee-designation">Community Engineer</p>
+                    <p class="employee-intro employee-intro--1">Previously a Web Engineer at Spotify.</p>
+                    <p class="employee-intro">Passionate about stationery and mechanical keyboards.</p>
+                </div>
+            </div>
+            <div class="employee">
+                <div class="employee-initials employee-initials--pd">PD</div>
+                <div class="employee-details">
+                    <p class="employee-full-name">Pedro Duarte</p>
+                    <p class="employee-designation">Hype Lead</p>
+                    <p class="employee-intro employee-intro--1">Previously helped create Radix, Stitches, and
+                        RainbowKit.</p>
+                    <p class="employee-intro">Used to play harmonica in a Rockabilly band.</p>
+                </div>
+            </div>
+            <div class="employee">
+                <div class="employee-initials employee-initials--ma">JB</div>
+                <div class="employee-details">
+                    <p class="employee-full-name">John Buckley</p>
+                    <p class="employee-designation">Software Engineer</p>
+                    <p class="employee-intro employee-intro--1">Previously a Software Engineer at Colortrix, Olive Toast
+                        Software, and Crocodile Clips..</p>
+                    <p class="employee-intro">Cannot go a single day without marmalade..</p>
+                </div>
+            </div>
+            <div class="employee">
+                <div class="employee-initials employee-initials--sm">SM</div>
+                <div class="employee-details">
+                    <p class="employee-full-name">Sorin Muntean</p>
+                    <p class="employee-designation">Software Engineer</p>
+                    <p class="employee-intro employee-intro--1">Previously a Software Engineer at Ottonova, and
+                        Internations.org.</p>
+                    <p class="employee-intro">Used to drive an ambulance for the Red Cross.</p>
+                </div>
+            </div>
+            <div class="employee">
+                <div class="employee-initials employee-initials--ma">MA</div>
+                <div class="employee-details">
+                    <p class="employee-full-name">Milena Araujo</p>
+                    <p class="employee-designation">Community Engineer</p>
+                    <p class="employee-intro employee-intro--1">Previously a Web Engineer at Spotify.</p>
+                    <p class="employee-intro">Passionate about stationery and mechanical keyboards.</p>
+                </div>
+            </div>
+            <div class="employee">
+                <div class="employee-initials employee-initials--pd">PD</div>
+                <div class="employee-details">
+                    <p class="employee-full-name">Pedro Duarte</p>
+                    <p class="employee-designation">Hype Lead</p>
+                    <p class="employee-intro employee-intro--1">Previously helped create Radix, Stitches, and
+                        RainbowKit.</p>
+                    <p class="employee-intro">Used to play harmonica in a Rockabilly band.</p>
+                </div>
+            </div>
+            <div class="employee">
+                <div class="employee-initials employee-initials--ma">JB</div>
+                <div class="employee-details">
+                    <p class="employee-full-name">John Buckley</p>
+                    <p class="employee-designation">Software Engineer</p>
+                    <p class="employee-intro employee-intro--1">Previously a Software Engineer at Colortrix, Olive Toast
+                        Software, and Crocodile Clips..</p>
+                    <p class="employee-intro">Cannot go a single day without marmalade..</p>
+                </div>
+            </div>
+            <div class="employee">
+                <div class="employee-initials employee-initials--sm">SM</div>
+                <div class="employee-details">
+                    <p class="employee-full-name">Sorin Muntean</p>
+                    <p class="employee-designation">Software Engineer</p>
+                    <p class="employee-intro employee-intro--1">Previously a Software Engineer at Ottonova, and
+                        Internations.org.</p>
+                    <p class="employee-intro">Used to drive an ambulance for the Red Cross.</p>
+                </div>
+            </div>
+            <div class="employee">
+                <div class="employee-initials employee-initials--ma">MA</div>
+                <div class="employee-details">
+                    <p class="employee-full-name">Milena Araujo</p>
+                    <p class="employee-designation">Community Engineer</p>
+                    <p class="employee-intro employee-intro--1">Previously a Web Engineer at Spotify.</p>
+                    <p class="employee-intro">Passionate about stationery and mechanical keyboards.</p>
+                </div>
+            </div>
+            <div class="employee">
+                <div class="employee-initials employee-initials--pd">PD</div>
+                <div class="employee-details">
+                    <p class="employee-full-name">Pedro Duarte</p>
+                    <p class="employee-designation">Hype Lead</p>
+                    <p class="employee-intro employee-intro--1">Previously helped create Radix, Stitches, and
+                        RainbowKit.</p>
+                    <p class="employee-intro">Used to play harmonica in a Rockabilly band.</p>
+                </div>
+            </div>
+            <div class="employee">
+                <div class="employee-initials employee-initials--ma">JB</div>
+                <div class="employee-details">
+                    <p class="employee-full-name">John Buckley</p>
+                    <p class="employee-designation">Software Engineer</p>
+                    <p class="employee-intro employee-intro--1">Previously a Software Engineer at Colortrix, Olive Toast
+                        Software, and Crocodile Clips..</p>
+                    <p class="employee-intro">Cannot go a single day without marmalade..</p>
+                </div>
+            </div>
+            <div class="employee">
+                <div class="employee-initials employee-initials--sm">SM</div>
+                <div class="employee-details">
+                    <p class="employee-full-name">Sorin Muntean</p>
+                    <p class="employee-designation">Software Engineer</p>
+                    <p class="employee-intro employee-intro--1">Previously a Software Engineer at Ottonova, and
+                        Internations.org.</p>
+                    <p class="employee-intro">Used to drive an ambulance for the Red Cross.</p>
+                </div>
+            </div>
+            <div class="employee">
+                <div class="employee-initials employee-initials--ma">MA</div>
+                <div class="employee-details">
+                    <p class="employee-full-name">Milena Araujo</p>
+                    <p class="employee-designation">Community Engineer</p>
+                    <p class="employee-intro employee-intro--1">Previously a Web Engineer at Spotify.</p>
+                    <p class="employee-intro">Passionate about stationery and mechanical keyboards.</p>
+                </div>
+            </div>
+            <div class="employee">
+                <div class="employee-initials employee-initials--pd">PD</div>
+                <div class="employee-details">
+                    <p class="employee-full-name">Pedro Duarte</p>
+                    <p class="employee-designation">Hype Lead</p>
+                    <p class="employee-intro employee-intro--1">Previously helped create Radix, Stitches, and
+                        RainbowKit.</p>
+                    <p class="employee-intro">Used to play harmonica in a Rockabilly band.</p>
+                </div>
+            </div>
+            <div class="employee">
+                <div class="employee-initials employee-initials--ma">JB</div>
+                <div class="employee-details">
+                    <p class="employee-full-name">John Buckley</p>
+                    <p class="employee-designation">Software Engineer</p>
+                    <p class="employee-intro employee-intro--1">Previously a Software Engineer at Colortrix, Olive Toast
+                        Software, and Crocodile Clips..</p>
+                    <p class="employee-intro">Cannot go a single day without marmalade..</p>
+                </div>
+            </div>
+            <div class="employee">
+                <div class="employee-initials employee-initials--sm">SM</div>
+                <div class="employee-details">
+                    <p class="employee-full-name">Sorin Muntean</p>
+                    <p class="employee-designation">Software Engineer</p>
+                    <p class="employee-intro employee-intro--1">Previously a Software Engineer at Ottonova, and
+                        Internations.org.</p>
+                    <p class="employee-intro">Used to drive an ambulance for the Red Cross.</p>
+                </div>
+            </div>
+            <div class="employee">
+                <div class="employee-initials employee-initials--ma">MA</div>
+                <div class="employee-details">
+                    <p class="employee-full-name">Milena Araujo</p>
+                    <p class="employee-designation">Community Engineer</p>
+                    <p class="employee-intro employee-intro--1">Previously a Web Engineer at Spotify.</p>
+                    <p class="employee-intro">Passionate about stationery and mechanical keyboards.</p>
+                </div>
+            </div>
+            <div class="employee">
+                <div class="employee-initials employee-initials--pd">PD</div>
+                <div class="employee-details">
+                    <p class="employee-full-name">Pedro Duarte</p>
+                    <p class="employee-designation">Hype Lead</p>
+                    <p class="employee-intro employee-intro--1">Previously helped create Radix, Stitches, and
+                        RainbowKit.</p>
+                    <p class="employee-intro">Used to play harmonica in a Rockabilly band.</p>
+                </div>
+            </div>
+            <div class="employee">
+                <div class="employee-initials employee-initials--ma">JB</div>
+                <div class="employee-details">
+                    <p class="employee-full-name">John Buckley</p>
+                    <p class="employee-designation">Software Engineer</p>
+                    <p class="employee-intro employee-intro--1">Previously a Software Engineer at Colortrix, Olive Toast
+                        Software, and Crocodile Clips..</p>
+                    <p class="employee-intro">Cannot go a single day without marmalade..</p>
+                </div>
+            </div>
+            <div class="employee">
+                <div class="employee-initials employee-initials--sm">SM</div>
+                <div class="employee-details">
+                    <p class="employee-full-name">Sorin Muntean</p>
+                    <p class="employee-designation">Software Engineer</p>
+                    <p class="employee-intro employee-intro--1">Previously a Software Engineer at Ottonova, and
+                        Internations.org.</p>
+                    <p class="employee-intro">Used to drive an ambulance for the Red Cross.</p>
+                </div>
+            </div>
+            <div class="employee">
+                <div class="employee-initials employee-initials--ma">MA</div>
+                <div class="employee-details">
+                    <p class="employee-full-name">Milena Araujo</p>
+                    <p class="employee-designation">Community Engineer</p>
+                    <p class="employee-intro employee-intro--1">Previously a Web Engineer at Spotify.</p>
+                    <p class="employee-intro">Passionate about stationery and mechanical keyboards.</p>
+                </div>
+            </div>
+            <div class="employee">
+                <div class="employee-initials employee-initials--pd">PD</div>
+                <div class="employee-details">
+                    <p class="employee-full-name">Pedro Duarte</p>
+                    <p class="employee-designation">Hype Lead</p>
+                    <p class="employee-intro employee-intro--1">Previously helped create Radix, Stitches, and
+                        RainbowKit.</p>
+                    <p class="employee-intro">Used to play harmonica in a Rockabilly band.</p>
+                </div>
+            </div>
+            <div class="employee">
+                <div class="employee-initials employee-initials--ma">JB</div>
+                <div class="employee-details">
+                    <p class="employee-full-name">John Buckley</p>
+                    <p class="employee-designation">Software Engineer</p>
+                    <p class="employee-intro employee-intro--1">Previously a Software Engineer at Colortrix, Olive Toast
+                        Software, and Crocodile Clips..</p>
+                    <p class="employee-intro">Cannot go a single day without marmalade..</p>
+                </div>
+            </div>
+            <div class="employee">
+                <div class="employee-initials employee-initials--sm">SM</div>
+                <div class="employee-details">
+                    <p class="employee-full-name">Sorin Muntean</p>
+                    <p class="employee-designation">Software Engineer</p>
+                    <p class="employee-intro employee-intro--1">Previously a Software Engineer at Ottonova, and
+                        Internations.org.</p>
+                    <p class="employee-intro">Used to drive an ambulance for the Red Cross.</p>
+                </div>
+            </div>
+            <div class="employee">
+                <div class="employee-initials employee-initials--ma">MA</div>
+                <div class="employee-details">
+                    <p class="employee-full-name">Milena Araujo</p>
+                    <p class="employee-designation">Community Engineer</p>
+                    <p class="employee-intro employee-intro--1">Previously a Web Engineer at Spotify.</p>
+                    <p class="employee-intro">Passionate about stationery and mechanical keyboards.</p>
+                </div>
+            </div>
+            <div class="employee">
+                <div class="employee-initials employee-initials--pd">PD</div>
+                <div class="employee-details">
+                    <p class="employee-full-name">Pedro Duarte</p>
+                    <p class="employee-designation">Hype Lead</p>
+                    <p class="employee-intro employee-intro--1">Previously helped create Radix, Stitches, and
+                        RainbowKit.</p>
+                    <p class="employee-intro">Used to play harmonica in a Rockabilly band.</p>
+                </div>
+            </div>
+            <div class="employee">
+                <div class="employee-initials employee-initials--ma">JB</div>
+                <div class="employee-details">
+                    <p class="employee-full-name">John Buckley</p>
+                    <p class="employee-designation">Software Engineer</p>
+                    <p class="employee-intro employee-intro--1">Previously a Software Engineer at Colortrix, Olive Toast
+                        Software, and Crocodile Clips..</p>
+                    <p class="employee-intro">Cannot go a single day without marmalade..</p>
+                </div>
+            </div>
+            <div class="employee">
+                <div class="employee-initials employee-initials--sm">SM</div>
+                <div class="employee-details">
+                    <p class="employee-full-name">Sorin Muntean</p>
+                    <p class="employee-designation">Software Engineer</p>
+                    <p class="employee-intro employee-intro--1">Previously a Software Engineer at Ottonova, and
+                        Internations.org.</p>
+                    <p class="employee-intro">Used to drive an ambulance for the Red Cross.</p>
+                </div>
+            </div>
+            <div class="employee">
+                <div class="employee-initials employee-initials--pd">PD</div>
+                <div class="employee-details">
+                    <p class="employee-full-name">Pedro Duarte</p>
+                    <p class="employee-designation">Hype Lead</p>
+                    <p class="employee-intro employee-intro--1">Previously helped create Radix, Stitches, and
+                        RainbowKit.</p>
+                    <p class="employee-intro">Used to play harmonica in a Rockabilly band.</p>
+                </div>
+            </div>
+            <div class="employee">
+                <div class="employee-initials employee-initials--ma">JB</div>
+                <div class="employee-details">
+                    <p class="employee-full-name">John Buckley</p>
+                    <p class="employee-designation">Software Engineer</p>
+                    <p class="employee-intro employee-intro--1">Previously a Software Engineer at Colortrix, Olive Toast
+                        Software, and Crocodile Clips..</p>
+                    <p class="employee-intro">Cannot go a single day without marmalade..</p>
+                </div>
+            </div>
+            <div class="employee">
+                <div class="employee-initials employee-initials--sm">SM</div>
+                <div class="employee-details">
+                    <p class="employee-full-name">Sorin Muntean</p>
+                    <p class="employee-designation">Software Engineer</p>
+                    <p class="employee-intro employee-intro--1">Previously a Software Engineer at Ottonova, and
+                        Internations.org.</p>
+                    <p class="employee-intro">Used to drive an ambulance for the Red Cross.</p>
+                </div>
+            </div>
+        </div>
+        <div class="team-members-gallery container">
+            <div class="team-photos">
+                <img src="./assets/team/team-photo-2@1080w.png" alt="" class="team-photo-1">
+                <img src="./assets/team/team-photo-3@2160w.png" alt="" class="team-photo-2">
+            </div>
+            <div class="team-metrics">
+                <div class="metrics">
+                    <div class="metric">
+                        <p class="metric-number">
+                            32
+                        </p>
+                        <p class="metric-text">Folks so far</p>
+                    </div>
+                    <div class="metric">
+                        <p class="metric-number">
+                            14
+                        </p>
+                        <p class="metric-text">Countries</p>
+                    </div>
+                    <div class="metric">
+                        <p class="metric-number">
+                            18
+                        </p>
+                        <p class="metric-text">Raypets</p>
+                    </div>
+                    <div class="metric">
+                        <p class="metric-number">
+                            100%
+                        </p>
+                        <p class="metric-text">Remote</p>
+                    </div>
+                </div>
+                <p>
+                    Our team is spread across 14 countries, 4 timezones, 2 continents, and we believe working fast,
+                    simple, and transparent, leads to a higher quality level of work, where we trust and respect our
+                    colleagues.
+                </p>
+                <p>
+                    Despite being fully-remote, we’ve still found time to meet up in our yearly retreats, such as
+                    Marbella in 2023, and bond over food, drinks, and activities like cooking paella and jet skiing.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="section mb-lg">
+        <div class="section-heading text-center mb-md">
+            <h2 class="secondary-heading">How we work</h2>
+            <p class="section-text">
+                It’s important that you enjoy your job, and love your life outside of work.
+            </p>
+        </div>
+        <div class="work-style container">
+            <ul class="work-style-col">
+                <li class="work-style-card">
+                    <p class="work-style-title">Time for <i>actual</i> work</p>
+                    <p class="work-style-text">
+                        We have one meeting with the entire team per week – that’s it. We work
+                        autonomously, communicate asynchronously and collaborate ad-hoc. Every week, we demo what we’ve
+                        accomplished.
+                    </p>
+                </li>
+                <li class="work-style-card">
+                    <p class="work-style-title">Rayday</p>
+                    <p class="work-style-text">
+                        Some of our most-loved features, such as Floating Notes, and tools like Ray.so have come from
+                        hackdays. That’s why Fridays are for hacking.
+                    </p>
+                    <p class="work-style-text">
+                        Take a step away from your team work for a day, and build whatever you like. Hack on a new
+                        extension, explore new design system components, or tidy up Notion. It’s up to you!
+                    </p>
+                </li>
+                <li class="work-style-card">
+                    <p class="work-style-title">Fast moving</p>
+                    <p class="work-style-text">
+                        Our aim is to continue making the best product we can. We bias to action and shipped 37 releases
+                        in 2021, including big features such as our Extensions API and hundreds of bug fixes and
+                        improvements.
+                    </p>
+                </li>
+                <li class="work-style-card">
+                    <p class="work-style-title">Modern tooling</p>
+                    <p class="work-style-text">
+                        We surround ourselves with the best work tools available. Figma, Linear, Notion, Cron, you name
+                        it. This environment sets the standard for our software.
+                    </p>
+                </li>
+            </ul>
+            <ul class="work-style-col">
+                <li class="work-style-card">
+                    <p class="work-style-title">Team offsite</p>
+                    <p class="work-style-text">
+                        Once a year we bring the entire team together. In 2021, we rented a villa in Dubai where we
+                        launched our API and drove quad bikes in the desert. In 2022, we went to Mykonos where we cooked
+                        traditional Greek food and sailed around the island. In 2023, we spent a week in Marbella where
+                        we had a paella cooking competition and rode jet skis. We can’t wait to see where it takes us
+                        next.
+                    </p>
+                </li>
+                <li class="work-style-card">
+                    <p class="work-style-title">Work on something you use, and our users love</p>
+                    <p class="work-style-text">
+                        All of us use Raycast every single day. We have internal extensions to write weekly updates,
+                        ship releases and more. It makes a huge difference if you build something that you actually use.
+                        Many features came out of our daily problems.
+                    </p>
+                </li>
+                <li class="work-style-card">
+                    <p class="work-style-title">Fully distributed team</p>
+                    <p class="work-style-text">
+                        We are a fully distributed company with 32 people, 18 pets, spread across 14 different
+                        countries. Everybody works on the schedule that fits them best. It allows us to structure our
+                        work around our lives and not the other way around.
+                    </p>
+                    <p class="work-style-text">
+                        Want to work in a warm city during the winter? Go for it. If you’re at lunch or you’re taking
+                        your dog for a walk during the day, set your Slack status so the rest of your team knows about
+                        it.
+                    </p>
+                </li>
+            </ul>
+            <ul class="work-style-col">
+                <li class="work-style-card">
+                    <p class="work-style-title">Cut out the s#!%</p>
+                    <p class="work-style-text">
+                        Many of us left companies because bureaucracy killed product development. We are here to build a
+                        great product with like-minded people. Everything else doesn’t matter.
+                    </p>
+                </li>
+                <li class="work-style-card">
+                    <p class="work-style-title">We have fun</p>
+                    <p class="work-style-text">
+                        It isn’t all work and no play. We get together regularly to play games, make pancakes or other
+                        virtual activities. Our #watercooler Slack channel is jammed with photos outside of work and
+                        weekend plans.
+                    </p>
+                    <p class="work-style-text">
+                        Take a step away from your team work for a day, and build whatever you like. Hack on a new
+                        extension, explore new design system components, or tidy up Notion. It’s up to you!
+                    </p>
+                </li>
+                <li class="work-style-card">
+                    <p class="work-style-title">We care about design</p>
+                    <p class="work-style-text">
+                        Design is at the heart of the product and team. Every pixel and every detail matters.
+                    </p>
+                    <p class="work-style-text">
+                        From icons, to the UI in both dark and light mode, illustrations, social media content, it all
+                        belongs to the same story.
+                    </p>
+                </li>
+                <li class="work-style-card">
+                    <p class="work-style-title">Collaborate with a community</p>
+                    <p class="work-style-text">
+                        Get direct feedback from passionate users, who actively contribute to the product with 600+
+                        script commands and 1500+ extensions, and work with the community to make Raycast even better.
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <div class="gallery">
+            <img src="./assets/gallery/1@2x.png" alt="People Photo">
+            <img src="./assets/gallery/2@2x.png" alt="People Photo">
+            <img src="./assets/gallery/3@2x.png" alt="People Photo">
+            <img src="./assets/gallery/4@2x.png" alt="People Photo">
+            <img src="./assets/gallery/5@2x.png" alt="People Photo">
+            <img src="./assets/gallery/6@2x.png" alt="People Photo">
+            <img src="./assets/gallery/7@2x.png" alt="People Photo">
+            <img src="./assets/gallery/8@2x.png" alt="People Photo">
+            <img src="./assets/gallery/9@2x.png" alt="People Photo">
+            <img src="./assets/gallery/11@2x.png" alt="People Photo">
+            <img src="./assets/gallery/12@2x.png" alt="People Photo">
+            <img src="./assets/gallery/13@2x.png" alt="People Photo">
+            <img src="./assets/gallery/15@2x.png" alt="People Photo">
+            <img src="./assets/gallery/17@2x.png" alt="People Photo">
+            <img src="./assets/gallery/18@2x.png" alt="People Photo">
+        </div>
+    </section>
+    <section class="section mb-lg">
+        <div class="section-heading text-center mb-md">
+            <h2 class="secondary-heading">Our benefits</h2>
+            <p class="section-text">
+                We put people first and want to empower everybody at Raycast to do your best work.
+            </p>
+        </div>
+        <ul class="benefits container">
+            <li class="benefit-card">
+                <img src="./assets/benefits/competitive-salary@2x.png" alt="Dollar icon" class="benefit-icon">
+                <p class="benefit-title">Competitive salary</p>
+                <p class="benefit-text">We pay you a location independent rate</p>
+            </li>
+            <li class="benefit-card">
+                <img src="./assets/benefits/generous-stock-options@2x.png" alt="Dollar icon" class="benefit-icon">
+                <p class="benefit-title">Stock options</p>
+                <p class="benefit-text">We don't treat "act like an owner" as a phrase</p>
+            </li>
+            <li class="benefit-card">
+                <img src="./assets/benefits/end-of-year-bonus@2x.png" alt="Dollar icon" class="benefit-icon">
+                <p class="benefit-title">End of year bonus</p>
+                <p class="benefit-text">We value going the extra mile</p>
+            </li>
+            <li class="benefit-card">
+                <img src="./assets/benefits/parental-leave@2x.png" alt="Dollar icon" class="benefit-icon">
+                <p class="benefit-title">Parental leave</p>
+                <p class="benefit-text">We provide 3 months paid time off</p>
+            </li>
+            <li class="benefit-card">
+                <img src="./assets/benefits/flexible-time-off@2x.png" alt="Dollar icon" class="benefit-icon">
+                <p class="benefit-title">Flexible time off</p>
+                <p class="benefit-text">We recommend at least 25 days</p>
+            </li>
+            <li class="benefit-card">
+                <img src="./assets/benefits/build-your-workspace@2x.png" alt="Dollar icon" class="benefit-icon">
+                <p class="benefit-title">Build your workspace</p>
+                <p class="benefit-text">Order your own equipment to onboard</p>
+            </li>
+            <li class="benefit-card">
+                <img src="./assets/benefits/corporate-card@2x.png" alt="Dollar icon" class="benefit-icon">
+                <p class="benefit-title">Corporate card</p>
+                <p class="benefit-text">Use it on whatever makes you productive</p>
+            </li>
+            <li class="benefit-card">
+                <img src="./assets/benefits/health-perks@2x.png" alt="Dollar icon" class="benefit-icon">
+                <p class="benefit-title">Health perks</p>
+                <p class="benefit-text">From insurance to gym. Stay healthy!</p>
+            </li>
+        </ul>
+    </section>
+    <section class="section mb-lg text-center">
+        <div class="section-heading">
+            <h2 class="secondary-heading">Open positions</h2>
+            <p class="section-text">
+                Currently we don't have any open positions. But we're always on the lookout for exceptional people.
+            </p>
+        </div>
+        <button class="apply-job">
+            Want to apply anyway? &nbsp;
+            <a href="#">Get in
+                touch&nbsp;<span>&rarr;</span></a>
+        </button>
+    </section>
+    <section class="section section-hiring mb-lg">
+        <div class="section-heading text-center mb-md">
+            <h2 class="secondary-heading">Hiring process</h2>
+            <p class="section-text">
+                Take a look at some of our interview steps, and a few tips to make your hiring experience great.
+            </p>
+        </div>
+        <div class="container">
+            <ul class="hiring-process">
+                <li class="hiring-step">
+                    <span class="step-text">Send an engaging message</span><span class="step">1</span>
+                    <div class="tips">
+                        <p class="tips-title">Tips</p>
+                        <p class="tips-text">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque eius nobis
+                            perferendis quisquam autem a quod, necessitatibus alias reprehenderit, officia hic? Quia,
+                            ullam
+                            nulla. Voluptate pariatur cupiditate eius expedita impedit.
+                        </p>
+                    </div>
+                </li>
+                <li class="hiring-step">
+                    <span class="step-text">Hiring manager intro</span><span class="step">2</span>
+                    <div class="tips">
+                        <p class="tips-title">Tips</p>
+                        <p class="tips-text">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque eius nobis
+                            perferendis quisquam autem a quod, necessitatibus alias reprehenderit, officia hic? Quia,
+                            ullam
+                            nulla. Voluptate pariatur cupiditate eius expedita impedit.
+                        </p>
+                    </div>
+                </li>
+                <li class="hiring-step">
+                    <span class="step-text">Meet the team</span><span class="step">3</span>
+                    <div class="tips">
+                        <p class="tips-title">Tips</p>
+                        <p class="tips-text">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque eius nobis
+                            perferendis quisquam autem a quod, necessitatibus alias reprehenderit, officia hic? Quia,
+                            ullam
+                            nulla. Voluptate pariatur cupiditate eius expedita impedit.
+                        </p>
+                    </div>
+                </li>
+                <li class="hiring-step">
+                    <span class="step-text">Take-home task</span><span class="step">4</span>
+                    <div class="tips">
+                        <p class="tips-title">Tips</p>
+                        <p class="tips-text">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque eius nobis
+                            perferendis quisquam autem a quod, necessitatibus alias reprehenderit, officia hic? Quia,
+                            ullam
+                            nulla. Voluptate pariatur cupiditate eius expedita impedit.
+                        </p>
+                    </div>
+                </li>
+                <li class="hiring-step">
+                    <span class="step-text">Task assessment</span><span class="step">5</span>
+                    <div class="tips">
+                        <p class="tips-title">Tips</p>
+                        <p class="tips-text">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque eius nobis
+                            perferendis quisquam autem a quod, necessitatibus alias reprehenderit, officia hic? Quia,
+                            ullam
+                            nulla. Voluptate pariatur cupiditate eius expedita impedit.
+                        </p>
+                    </div>
+                </li>
+                <li class="hiring-step">
+                    <span class="step-text">Get to know our Founders</span><span class="step">6</span>
+                    <div class="tips">
+                        <p class="tips-title">Tips</p>
+                        <p class="tips-text">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque eius nobis
+                            perferendis quisquam autem a quod, necessitatibus alias reprehenderit, officia hic? Quia,
+                            ullam
+                            nulla. Voluptate pariatur cupiditate eius expedita impedit.
+                        </p>
+                    </div>
+                </li>
+                <li class="hiring-step">
+                    <span class="step-text offer-text">Offer Stage</span><span class="step">7</span>
+                    <div class="tips">
+                        <p class="tips-title">Tips</p>
+                        <p class="tips-text">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque eius nobis
+                            perferendis quisquam autem a quod, necessitatibus alias reprehenderit, officia hic? Quia,
+                            ullam
+                            nulla. Voluptate pariatur cupiditate eius expedita impedit.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="section">
+        <div class="section-heading text-center mb-md">
+            <h2 class="secondary-heading">Investors</h2>
+            <p class="section-text">
+                Meet the great investors and people helping to make Raycast grow.
+            </p>
+        </div>
+        <div class="investors text-center container">
+            <div class="companies">
+                <a href="#" class="company">
+                    <svg class="company-accel-svg" xmlns="http://www.w3.org/2000/svg" fill="none">
+                        <path fill="#fff" fill-rule="evenodd"
+                            d="M13.183.62c-1.262.328-2.35.651-2.418.72-.068.067.175.34.54.606s.665.632.665.816c0 .661-8.535 20.263-9.182 21.086-.376.48-1.122 1.02-1.725 1.253L0 25.51l4.11-.012c3.081-.008 3.9-.07 3.265-.244-2.628-.722-2.704-1.183-.947-5.75l.697-1.812 5.123-1.27c4.016-.998 5.166-1.205 5.319-.962.53.844 2.439 6.49 2.552 7.552.147 1.372-.01 1.593-1.524 2.146-.866.316-.512.345 4.378.348l5.32.005-1.264-.484c-.8-.307-1.464-.766-1.81-1.252-.302-.421-2.522-5.917-4.934-12.212S15.805.096 15.688.07s-1.244.222-2.505.55m62.083.01c-1.555.4-2.357.722-2.357.942 0 .184.142.334.317.334.174 0 .555.221.846.492.529.49.53.507.526 10.67-.003 7.604-.08 10.33-.303 10.78-.165.332-.79.843-1.387 1.136l-1.088.532 4.595-.009c4.408-.009 4.552-.024 3.557-.375-1.936-.683-1.856-.127-1.933-13.39C78 5.273 77.892-.012 77.797 0s-1.234.296-2.53.63M16.955 14.137c-.296.294-9.36 2.402-9.262 2.153C8.35 14.63 12.57 4.563 12.76 4.205c.21-.397.583.366 2.281 4.67 1.116 2.83 1.978 5.198 1.915 5.26m14.43-5.386c-4.559 1.491-7.162 6.044-6.013 10.518 1.228 4.779 5.701 7.535 10.587 6.524 1.597-.33 3.976-1.771 4.776-2.893.61-.852.496-1.274-.177-.666-.955.861-2.799 1.464-4.527 1.48-1.386.012-1.944-.108-3.078-.664-1.777-.87-2.737-2.04-3.372-4.113-1.534-5.01 1.565-10.666 5.445-9.94 1.449.27 2.655 2.275 2.264 3.763-.069.264-.015.48.12.48.303 0 3.187-.738 3.294-.843.043-.042-.09-.4-.294-.794-.485-.936-1.687-1.93-3.047-2.52-1.414-.614-4.578-.79-5.978-.332m16.225-.105c-2.423.577-4.653 2.408-5.822 4.782-.606 1.232-.679 1.636-.679 3.79 0 2.136.075 2.564.658 3.746.839 1.704 2.581 3.441 4.29 4.277 1.171.573 1.628.656 3.637.657 1.984 0 2.485-.087 3.67-.64 1.654-.774 3.585-2.482 3.585-3.172 0-.468-.04-.46-.669.141-.972.93-2.581 1.446-4.53 1.456-2.035.01-3.075-.391-4.572-1.767-3.669-3.372-2.419-11.474 1.973-12.786 2.24-.67 3.926.615 3.927 2.993.001 1.098.036 1.164.545 1.03.3-.08 1.113-.271 1.809-.427l1.264-.284-.53-.938c-1.287-2.285-5.313-3.63-8.556-2.858m15.718 0c-2.41.574-4.58 2.4-5.749 4.835-.669 1.396-.751 1.805-.751 3.742 0 1.967.075 2.328.785 3.767 1.427 2.89 4.16 4.748 7.311 4.973 1.697.121 3.837-.34 5.056-1.088 1.094-.671 2.894-2.523 2.77-2.847-.089-.229-.251-.182-.61.176-1.601 1.597-5.346 2.027-7.574.871-2.029-1.053-3.261-2.796-3.638-5.144l-.153-.955 5.28-1.304a667 667 0 0 0 6.047-1.512c.748-.203.76-.228.52-1.107-.567-2.088-2.106-3.528-4.54-4.249-1.353-.4-3.443-.47-4.754-.158m4.797 1.198c.898 1.003 1.024 3.127.232 3.924-.315.316-6.647 2.124-7.44 2.124-.293 0 .09-2.252.574-3.378 1.027-2.385 2.876-3.72 4.88-3.526.829.08 1.238.28 1.754.856"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+                <a href="#" class="company">
+                    <svg class="company-coatue-svg" xmlns="http://www.w3.org/2000/svg" fill="none">
+                        <path fill="#fff" fill-rule="evenodd"
+                            d="M6.548.611C3.1 1.83.858 5.055.51 9.29c-.36 4.407 1.613 8.225 5.115 9.894 3.629 1.73 8.031.627 9.966-2.497.939-1.515 1.052-2.214.36-2.214-.16 0-.614.537-1.01 1.193-1.982 3.283-6.2 3.763-8.887 1.013-1.754-1.795-2.381-3.991-2.198-7.689.215-4.35 1.576-6.71 4.405-7.638 2.494-.817 5.237 1.138 6.07 4.325.286 1.094.576 1.536 1.006 1.536.54 0 .606-.357.606-3.284 0-3.02-.053-3.284-.655-3.284-.361 0-.742.143-.848.318-.11.181-.99.032-2.038-.345-2.28-.821-3.546-.822-5.855-.006m17.559-.02c-5.983 2.183-8.05 10.55-3.962 16.032 2.862 3.837 8.98 4.483 12.705 1.34 3.804-3.21 4.438-10.122 1.325-14.45C32.093.615 27.606-.687 24.108.59m18.856 7.745c-1.706 4.42-3.319 8.387-3.586 8.814s-1.025 1.007-1.684 1.289c-1.939.83-1.059 1.219 2.752 1.219 2.7 0 3.526-.107 3.526-.458 0-.252-.57-.601-1.267-.778-1.539-.389-1.73-1.136-.922-3.624l.562-1.732 3.41.098 3.411.098.78 2.062c.428 1.134.78 2.255.78 2.49 0 .237-.533.532-1.183.657-.677.13-1.182.432-1.182.707 0 .382.795.48 3.884.48 3.106 0 3.883-.097 3.883-.485 0-.266-.462-.65-1.026-.85-1.189-.425-1.28-.619-5.236-11.024-2.001-5.265-2.803-7-3.232-7s-1.333 1.977-3.67 8.037m12.826-5.292c0 1.32.154 2.496.34 2.615.188.118.606-.28.93-.888 1.348-2.53 2.043-3.09 3.831-3.09h1.665l-.09 8.21-.091 8.211-1.435.326c-.795.18-1.435.527-1.435.778 0 .35 1.029.452 4.558.452 3.643 0 4.559-.096 4.559-.476 0-.26-.48-.573-1.066-.693-2-.41-1.973-.289-1.973-8.899V1.681h1.63c1.776 0 2.474.518 3.656 2.713.343.636.775 1.18.96 1.21.192.03.381-1.033.438-2.454l.099-2.506H55.789zM73.35.963c0 .175.517.494 1.151.708s1.242.628 1.35.92c.11.291.2 3.415.2 6.943 0 5.962.05 6.497.727 7.617 1.895 3.14 8.085 3.834 11.093 1.242 1.854-1.597 2.02-2.298 2.058-8.657.018-3.194.138-6.197.267-6.672.156-.58.613-.991 1.386-1.25 2.376-.796 1.567-1.17-2.531-1.17-2.958 0-3.905.105-3.802.423.076.233.634.527 1.241.655.607.127 1.28.41 1.495.63.257.263.427 2.456.497 6.42.119 6.778-.117 7.812-2.054 8.986-1.316.799-4.174.888-5.482.171-1.752-.96-2.014-2.03-2.136-8.7-.07-3.808.02-6.361.24-6.782.194-.371.814-.769 1.378-.884.564-.116 1.025-.37 1.025-.565 0-.222-1.51-.354-4.052-.354-2.25 0-4.052.142-4.052.319m21.017.113c.076.238.534.48 1.016.54.483.058 1.044.311 1.247.561.249.307.34 2.974.278 8.19l-.09 7.735-1.267.32c-.696.177-1.266.526-1.266.778 0 .367 1.576.458 7.935.458h7.935v-.814c0-.447.098-1.77.217-2.938.179-1.752.129-2.125-.286-2.125-.277 0-.78.628-1.118 1.395s-.961 1.778-1.386 2.247c-.708.782-1.017.852-3.759.852-1.874 0-3.139-.155-3.393-.415-.262-.269-.405-1.667-.405-3.975v-3.561h1.805c1.983 0 2.696.497 3.101 2.16.128.524.444.951.702.951.373 0 .47-.785.47-3.803 0-4.045-.304-4.69-1.19-2.518-.67 1.642-.966 1.815-3.115 1.822l-1.773.005v-7.26h2.807c2.627 0 2.863.061 3.673.95.476.524 1.042 1.302 1.257 1.73s.614.777.886.777c.383 0 .494-.504.494-2.247V.644h-7.457c-5.814 0-7.426.095-7.318.432m-64.983.745c1.212.645 2.296 1.871 2.783 3.144 1.142 2.99.927 8.488-.428 10.957-1.865 3.395-5.93 3.877-8.466 1.002-1.507-1.708-2.066-4.119-1.865-8.041.173-3.387 1.082-5.472 2.944-6.756 1.333-.92 3.62-1.058 5.032-.306M47.19 8.178c.69 1.768 1.178 3.291 1.085 3.386s-1.31.127-2.706.071l-2.537-.101.984-2.593c1.375-3.624 1.651-4.257 1.794-4.107.07.072.69 1.577 1.38 3.344"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+                <a href="#" class="company-y-link">
+                    <img src="./assets/investors/company/ycombinator.png" alt="">
+                </a>
+                <a href="#" class="company-chapter-one-link">
+                    <img src="./assets/investors/company/chapter-one@2x.png" alt="">
+                </a>
+            </div>
+            <div class="individuals">
+                <div class="individual-box">
+                    <img src="./assets//investors/calvin-french-owen@2x.png" alt="CalvinFrenchOwen" class="individual">
+                    <div class="description">
+                        <p class="individual-title">David Cramer</p>
+                        <p class="individual-description">Co-Founder and CTO at Sentry.</p>
+                    </div>
+                </div>
+                <div class="individual-box">
+                    <img src="./assets//investors/charley-cheever@2x.png" alt="CalvinFrenchOwen" class="individual">
+                    <div class="description">
+                        <p class="individual-title">David Cramer</p>
+                        <p class="individual-description">Co-Founder and CTO at Sentry.</p>
+                    </div>
+                </div>
+                <div class="individual-box">
+                    <img src="./assets//investors/david-cramer@2x.png" alt="David Cramer" class="individual">
+                    <div class="description">
+                        <p class="individual-title">David Cramer</p>
+                        <p class="individual-description">Co-Founder and CTO at Sentry.</p>
+                    </div>
+                </div>
+                <div class="individual-box">
+                    <img src="./assets//investors/jason-warner@2x.png" alt="CalvinFrenchOwen" class="individual">
+                    <div class="description">
+                        <p class="individual-title">David Cramer</p>
+                        <p class="individual-description">Co-Founder and CTO at Sentry.</p>
+                    </div>
+                </div>
+                <div class="individual-box">
+                    <img src="./assets//investors/jeff-soo@2x.png" alt="CalvinFrenchOwen" class="individual">
+                    <div class="description">
+                        <p class="individual-title">David Cramer</p>
+                        <p class="individual-description">Co-Founder and CTO at Sentry.</p>
+                    </div>
+                </div>
+                <div class="individual-box">
+                    <img src="./assets//investors/jeff-weinstein@2x.png" alt="CalvinFrenchOwen" class="individual">
+                    <div class="description">
+                        <p class="individual-title">David Cramer</p>
+                        <p class="individual-description">Co-Founder and CTO at Sentry.</p>
+                    </div>
+                </div>
+                <div class="individual-box">
+                    <img src="./assets//investors/joe-thomas@2x.png" alt="CalvinFrenchOwen" class="individual">
+                    <div class="description">
+                        <p class="individual-title">David Cramer</p>
+                        <p class="individual-description">Co-Founder and CTO at Sentry.</p>
+                    </div>
+                </div>
+                <div class="individual-box">
+                    <img src="./assets//investors/johnny-boufarhat@2x.png" alt="CalvinFrenchOwen" class="individual">
+                    <div class="description">
+                        <p class="individual-title">David Cramer</p>
+                        <p class="individual-description">Co-Founder and CTO at Sentry.</p>
+                    </div>
+                </div>
+                <div class="individual-box">
+                    <img src="./assets//investors/karri-saarinen@2x.png" alt="CalvinFrenchOwen" class="individual">
+                    <div class="description">
+                        <p class="individual-title">David Cramer</p>
+                        <p class="individual-description">Co-Founder and CTO at Sentry.</p>
+                    </div>
+                </div>
+                <div class="individual-box">
+                    <img src="./assets//investors/koen-bok@2x.png" alt="CalvinFrenchOwen" class="individual">
+                    <div class="description">
+                        <p class="individual-title">David Cramer</p>
+                        <p class="individual-description">Co-Founder and CTO at Sentry.</p>
+                    </div>
+                </div>
+                <div class="individual-box">
+                    <img src="./assets//investors/ludwig-pettersson@2x.png" alt="CalvinFrenchOwen" class="individual">
+                    <div class="description">
+                        <p class="individual-title">David Cramer</p>
+                        <p class="individual-description">Co-Founder and CTO at Sentry.</p>
+                    </div>
+                </div>
+                <div class="individual-box">
+                    <img src="./assets//investors/manik-gupta@2x.png" alt="CalvinFrenchOwen" class="individual">
+                    <div class="description">
+                        <p class="individual-title">David Cramer</p>
+                        <p class="individual-description">Co-Founder and CTO at Sentry.</p>
+                    </div>
+                </div>
+                <div class="individual-box">
+                    <img src="./assets//investors/max-stoiber@2x.png" alt="CalvinFrenchOwen" class="individual">
+                    <div class="description">
+                        <p class="individual-title">David Cramer</p>
+                        <p class="individual-description">Co-Founder and CTO at Sentry.</p>
+                    </div>
+                </div>
+                <div class="individual-box">
+                    <img src="./assets//investors/mirko-novakovic@2x.png" alt="CalvinFrenchOwen" class="individual">
+                    <div class="description">
+                        <p class="individual-title">David Cramer</p>
+                        <p class="individual-description">Co-Founder and CTO at Sentry.</p>
+                    </div>
+                </div>
+                <div class="individual-box">
+                    <img src="./assets//investors/olufemi-awomosu@2x.png" alt="CalvinFrenchOwen" class="individual">
+                    <div class="description">
+                        <p class="individual-title">David Cramer</p>
+                        <p class="individual-description">Co-Founder and CTO at Sentry.</p>
+                    </div>
+                </div>
+                <div class="individual-box">
+                    <img src="./assets//investors/ott-kaukver@2x.png" alt="CalvinFrenchOwen" class="individual">
+                    <div class="description">
+                        <p class="individual-title">David Cramer</p>
+                        <p class="individual-description">Co-Founder and CTO at Sentry.</p>
+                    </div>
+                </div>
+                <div class="individual-box">
+                    <img src="./assets//investors/steve-morin@2x.png" alt="CalvinFrenchOwen" class="individual">
+                    <div class="description">
+                        <p class="individual-title">David Cramer</p>
+                        <p class="individual-description">Co-Founder and CTO at Sentry.</p>
+                    </div>
+                </div>
+                <div class="individual-box">
+                    <img src="./assets//investors/tanguy-le-stradic@2x.png" alt="CalvinFrenchOwen" class="individual">
+                    <div class="description">
+                        <p class="individual-title">David Cramer</p>
+                        <p class="individual-description">Co-Founder and CTO at Sentry.</p>
+                    </div>
+                </div>
+                <div class="individual-box">
+                    <img src="./assets//investors/zach-holman@2x.png" alt="CalvinFrenchOwen" class="individual">
+                    <div class="description">
+                        <p class="individual-title">David Cramer</p>
+                        <p class="individual-description">Co-Founder and CTO at Sentry.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-social-network">
+
+    </section>
+    <script>
+        const elements = document.querySelectorAll('.hiring-step');
+        const hiringProcessElement = document.querySelector('.hiring-process');
+        const hiringProcessRect = hiringProcessElement.getBoundingClientRect();
+
+        elements.forEach(element => {
+            element.addEventListener('mouseenter', () => {
+                elements.forEach(ele => ele.classList.remove('active'));
+                element.classList.add('active');
+            });
+        })
+        //# sourceURL=somename.js
+    </script>
+</body>
+
+</html>

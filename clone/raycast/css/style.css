@@ -1,0 +1,751 @@
+/* 
+Header bg-color: #191214
+main color: #eaecef
+accent color: #ff6362
+gray color: 
+
+main-bg-color: #07080a
+card-color: #120e19
+
+#e6e6e6
+#9c9c9d
+
+text-color: #ffffff
+*/
+
+/* *********************************** */
+/* General */
+/* *********************************** */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  line-height: 1;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: #9c9c9d;
+  background-color: #07080a;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.section {
+  margin-bottom: 9.6rem;
+}
+
+.section-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.secondary-heading {
+  font-size: 5.2rem;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  color: #fff;
+  margin-bottom: 1.6rem;
+}
+
+.section-text {
+  font-size: 2rem;
+  line-height: 1.4;
+  margin-bottom: 2.4rem;
+  max-width: 56rem;
+}
+
+.mb-md {
+  margin-bottom: 9.6rem;
+}
+
+.mb-lg {
+  margin-bottom: 16rem;
+}
+
+.container-md {
+  max-width: 96rem;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 103rem;
+  margin: 0 auto;
+}
+
+/* *********************************** */
+/* HEADER */
+/* *********************************** */
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 1.6rem;
+  position: fixed;
+  z-index: 10;
+}
+
+.navigation {
+  flex-basis: 1204px;
+  padding: 2rem 3.2rem;
+  border-radius: 11px;
+  background: linear-gradient(
+    137deg,
+    rgba(17, 18, 20, 0.75) 4.87%,
+    rgba(12, 13, 15, 0.9) 75.88%
+  );
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.2rem;
+}
+
+li.home {
+  margin-right: auto;
+}
+
+.brand {
+  height: 2.4rem;
+}
+
+.nav-link:link,
+.nav-link:visited {
+  text-decoration: none;
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  color: #9c9c9d;
+  transition: color 0.3s;
+}
+
+.nav-link:hover,
+.nav-link:active {
+  color: #e6e6e6;
+}
+
+.login {
+  margin-left: auto;
+}
+
+.download-btn button {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  font-size: 1.4rem;
+  padding: 0.8rem 1.2rem;
+  border-radius: 9px;
+}
+
+.download-icon {
+  height: 1.6rem;
+}
+
+/* *********************************** */
+/* HERO SECTION */
+/* *********************************** */
+
+.hero-section {
+  height: 100vh;
+  background-image: url("../assets/hero/background.2dff3c1b.jpg");
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-text-box {
+  max-width: 74rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.primary-heading {
+  font-size: 8rem;
+  font-weight: 600;
+  color: #eaecef;
+  line-height: 1.1;
+  letter-spacing: 1.2px;
+
+  margin-bottom: 1.6rem;
+}
+
+.hero-btn:link,
+.hero-btn:visited {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #eaebef;
+  padding: 1.6rem 6.4rem;
+  border-radius: 9px;
+  border: 3px solid #62697b;
+
+  font-size: 1.6rem;
+  color: #191214;
+  transition: background-color 0.3s;
+}
+
+.hero-btn:hover,
+.hero-btn:active {
+  background-color: #fff;
+}
+
+/* *********************************** */
+/* OUR VALUES SECTION */
+/* *********************************** */
+.values {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1.6rem;
+  row-gap: 1.6rem;
+}
+
+.value-card {
+  background-color: #120e19;
+  padding: 3.2rem;
+  border-radius: 9px;
+}
+
+.value-card-heading {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 1.6rem;
+}
+
+.value-card-text {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+}
+
+/* *********************************** */
+/* HOW WE WORK SECTION */
+/* *********************************** */
+
+.work-style {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+  margin-bottom: 9.6rem;
+}
+
+.work-style-col {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.work-style-card {
+  background-color: #131517;
+  padding: 4.8rem;
+  border-radius: 9px;
+}
+
+.work-style-title {
+  font-size: 2rem;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  color: #fff;
+  margin-bottom: 1.6rem;
+}
+
+.work-style-text {
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.work-style-text:not(:last-child) {
+  margin-bottom: 1.6rem;
+}
+
+.gallery {
+  overflow-x: scroll;
+  display: flex;
+  height: 40rem;
+  gap: 1.6rem;
+}
+
+.gallery img {
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+.gallery img:hover {
+  opacity: 1;
+}
+
+/* *********************************** */
+/* OUR BENEFITS SECTION */
+/* *********************************** */
+.benefits {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.6rem;
+}
+
+.benefit-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3.2rem;
+  border-radius: 11px;
+  background-color: #141517;
+}
+
+.benefit-icon {
+  height: 3.2rem;
+  margin-bottom: 2.4rem;
+}
+
+.benefit-title {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 1.6rem;
+  text-align: center;
+}
+
+.benefit-text {
+  font-size: 1.6rem;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* *********************************** */
+/* OUR BENEFITS SECTION */
+/* *********************************** */
+
+.apply-job {
+  padding: 2rem;
+  background-color: #202022;
+  border-radius: 11px;
+  color: inherit;
+  font-size: 1.6rem;
+  cursor: pointer;
+  border: none;
+}
+
+.apply-job a {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+}
+
+.apply-job a span {
+  display: inline-block;
+  transition: transform 0.2s;
+}
+
+.apply-job:hover a span {
+  transform: translateX(0.5rem);
+}
+
+/* *********************************** */
+/* HIRING PROCESS SECTION */
+/* *********************************** */
+
+.section-hiring {
+  background-image: linear-gradient(240deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),
+    url(../assets/hiring-process-background.b1cd24e3.jpg);
+  background-size: cover;
+  /* mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.8) 10%,
+    rgba(0, 0, 0, 0.1) 100%,
+    rgba(0, 0, 0, 0.2) 10%
+  );*/
+  /* Adjust the gradient direction and color stops as needed */
+  /* mask-size: cover;  */
+}
+
+.hiring-process {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: calc(50% - 24px);
+}
+
+.hiring-step {
+  text-align: right;
+  font-size: 1.6rem;
+  position: relative;
+  color: #fff;
+
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.offer-text {
+  color: rgb(89, 212, 153);
+}
+
+.step {
+  display: inline-flex;
+  height: 4.8rem;
+  width: 4.8rem;
+  border: 1px solid #aaa;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1.6rem;
+  transition: all 0.2s;
+}
+
+.hiring-step.active {
+  opacity: 1;
+}
+
+.hiring-step.active .step {
+  background-color: #aaaaaa62;
+}
+
+.hiring-step:not(:last-child):after {
+  content: "";
+  display: block;
+  height: 6.4rem;
+  margin: 0.8rem 0;
+  border-right: 1px dashed #aaa;
+  transform: translateX(-2.4rem);
+}
+
+.tips {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(calc(100% + 1.6rem), -15%);
+  padding: 3.2rem;
+  width: 30rem;
+  background-color: #181425;
+  border-radius: 11px;
+  text-align: left;
+  z-index: 10;
+}
+
+.hiring-step.active .tips {
+  display: block;
+}
+
+.hiring-step:nth-last-child(2).active .tips {
+  transform: translate(calc(100% + 1.6rem), -40%);
+}
+
+.hiring-step:last-child.active .tips {
+  transform: translate(calc(100% + 1.6rem), -70%);
+}
+
+.tips-title {
+  font-size: 2.4rem;
+  font-weight: 500;
+  margin-bottom: 2.4rem;
+}
+
+.tips-text {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #9c9c9d;
+}
+
+/* *********************************** */
+/* INVESTORS SECTION */
+/* *********************************** */
+
+.companies {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6.4rem;
+  margin-bottom: 6.4rem;
+}
+
+.company {
+  display: flex;
+  align-items: center;
+  opacity: 0.6;
+  transition: all 0.3s;
+}
+
+.company:hover {
+  opacity: 1;
+}
+
+.company-accel-svg {
+  height: 2.7rem;
+  width: 8.2rem;
+}
+
+.company-coatue-svg {
+  height: 2rem;
+  width: 11.2rem;
+}
+
+.companies img {
+  height: 100%;
+  transition: all 0.3s;
+}
+
+.company-y-link {
+  height: 4.8rem;
+  background-size: contain;
+  transition: all 0.3s;
+}
+
+.company-y-link:hover img {
+  opacity: 0;
+}
+
+.company-y-link:hover {
+  background-image: url("../assets/investors/company/ycombinator-hover.png");
+}
+
+.company-chapter-one-link {
+  height: 4.8rem;
+  opacity: 0.6;
+  transition: all 0.3s;
+}
+
+.company-chapter-one-link:hover {
+  opacity: 1;
+}
+
+.individuals {
+  display: flex;
+  gap: 3.2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.individual-box {
+  position: relative;
+}
+
+.individual {
+  height: 6.4rem;
+  width: 6.4rem;
+  opacity: 0.6;
+  transition: all 0.2s;
+}
+
+.individual:hover {
+  transform: translateY(-0.8rem);
+  opacity: 1;
+}
+
+.description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30rem;
+  transform: translate(-37.5%, calc(-100% - 1.6rem));
+  background-color: #1e1a25;
+  padding: 3.2rem;
+  border-radius: 11px;
+  text-align: left;
+  display: none;
+}
+
+.individual-box:hover .description {
+  display: block;
+}
+
+.individual-title {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 1.6rem;
+}
+
+.individual-description {
+  font-size: 1.4rem;
+}
+
+/* *********************************** */
+/* TEAM MEMBERS SECTION */
+/* *********************************** */
+
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.4rem;
+  align-items: center;
+  margin-bottom: 9.6rem;
+}
+
+.employee {
+  position: relative;
+}
+
+.employee-initials {
+  height: 6.4rem;
+  width: 6.4rem;
+  border-radius: 50%;
+  opacity: 0.6;
+  transition: all 0.2s;
+  color: #fff;
+
+  font-size: 1.8rem;
+  font-weight: 300;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.employee-initials--ma {
+  background-image: linear-gradient(
+    to top left,
+    rgb(218, 48, 165),
+    rgba(218, 48, 164, 0.484)
+  );
+}
+
+.employee-initials--pd {
+  background-image: linear-gradient(to top left, #d72a2a, #ff6363);
+}
+
+.employee-initials--sm {
+  background-image: linear-gradient(to top left, #0f3d34, #86dcc2);
+}
+
+.employee-initials--an {
+  background-image: linear-gradient(
+    to top left,
+    rgb(218, 48, 165),
+    rgba(218, 48, 164, 0.484)
+  );
+}
+.employee-initials--jt {
+  background-image: linear-gradient(
+    to top left,
+    rgb(218, 48, 165),
+    rgba(218, 48, 164, 0.484)
+  );
+}
+
+.employee:hover .employee-initials {
+  opacity: 1;
+  transform: translateY(-0.5rem);
+}
+
+.employee-details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-37.5%, calc(-100% - 1.6rem));
+  border-radius: 9px;
+
+  display: none;
+}
+
+.employee:hover .employee-details {
+  display: block;
+}
+
+.employee-details {
+  padding: 3.2rem;
+  background-color: #1e1a25;
+  width: 25rem;
+}
+
+.employee-full-name {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.employee-designation {
+  font-size: 1.4rem;
+  margin-bottom: 1.4rem;
+}
+
+.employee-intro {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #fff;
+}
+
+.employee-intro--1 {
+  margin-bottom: 1.6rem;
+}
+
+.team-members-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6.4rem;
+}
+
+.team-photos {
+  position: relative;
+}
+
+.team-photo-1 {
+  position: relative;
+  height: 35rem;
+  transform: rotate(-2.5deg);
+}
+
+.team-photo-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(2.5deg);
+  height: 35rem;
+}
+
+.metrics {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3.2rem;
+}
+
+.metric-number {
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: transparent;
+  letter-spacing: 1px;
+  background-image: linear-gradient(to bottom right, #f53c86, #7001ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.metric-text {
+  font-size: 1.6rem;
+}
+
+.team-metrics > p {
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.team-metrics > p:first-of-type {
+  margin-bottom: 1.6rem;
+}
+
+/* *********************************** */
+/* TEAM MEMBERS SECTION */
+/* *********************************** */
