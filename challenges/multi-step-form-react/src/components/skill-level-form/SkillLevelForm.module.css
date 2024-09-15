@@ -1,0 +1,34 @@
+.levels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2.4rem;
+  row-gap: 1.6rem;
+}
+
+.level {
+  display: flex;
+  align-items: center;
+  padding: 1.6rem 1.6rem;
+  border: 1px solid #ddd;
+  gap: 1.6rem;
+  border-radius: 9px;
+}
+
+.active {
+  border: 1px solid #fc6c4c;
+}
+
+.levelIcon {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #fc6c4c;
+}
+
+.levelText {
+  font-size: 1.2rem;
+  font-weight: 500;
+}

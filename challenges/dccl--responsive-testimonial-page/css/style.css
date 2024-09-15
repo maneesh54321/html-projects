@@ -1,0 +1,120 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Sora", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #52525a;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.testimonials-container {
+  background-color: #fafaf9;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4.8rem;
+  padding: 9.6rem 4.8rem;
+}
+
+.testimonials-text-box {
+  max-width: 50rem;
+}
+
+.header-icon {
+  background-color: #f5c044;
+  display: inline-block;
+  padding: 1.2rem;
+  border-radius: 50%;
+  font-size: 2.4rem;
+  margin-bottom: 2.4rem;
+}
+
+.secondary-heading {
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: #18181b;
+  margin-bottom: 2.4rem;
+}
+
+.testimonials-brag-text {
+  font-size: 1.8rem;
+  line-height: 1.7;
+  margin-bottom: 3.2rem;
+}
+
+.testimonial-advantages {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.testimonial-advantage {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.testimonial-advantage-text {
+  font-size: 1.2rem;
+}
+
+.testimonials-box {
+  max-width: 55rem;
+  flex-grow: 1;
+}
+
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.testimonial:nth-child(odd) {
+  align-self: flex-end;
+}
+
+.testimonial {
+  background-color: #fff;
+  width: 31rem;
+  padding: 3.2rem;
+}
+
+.rating-header {
+  display: flex;
+  gap: 1.6rem;
+  margin-bottom: 1.6rem;
+}
+
+.company-logo {
+  height: 2.4rem;
+}
+
+.reviewer-name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  color: #18181b;
+}
+
+.reviewer-comment {
+  font-size: 1.4rem;
+  line-height: 2.7rem;
+}

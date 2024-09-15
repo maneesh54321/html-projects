@@ -1,0 +1,10 @@
+/* **************************** */
+/* PERSONAL INFO FORM */
+/* **************************** */
+
+.personalInfoForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2.4rem;
+  row-gap: 1.6rem;
+}

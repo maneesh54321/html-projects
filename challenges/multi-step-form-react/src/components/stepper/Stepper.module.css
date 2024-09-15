@@ -1,0 +1,41 @@
+ul {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+}
+
+ul li:not(:first-child) {
+  flex-grow: 1;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.startLine {
+  background-color: #888;
+  display: inline-block;
+  padding: 2px;
+  border-radius: 10rem;
+  flex-grow: 1;
+}
+
+.stepNum {
+  height: 3.2rem;
+  width: 3.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #888;
+
+  font-size: 1.6rem;
+  color: #fff;
+  font-weight: 500;
+}
+
+.active {
+  background-color: #fc6c4c;
+}

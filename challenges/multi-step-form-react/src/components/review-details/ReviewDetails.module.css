@@ -1,0 +1,21 @@
+.details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 2.4rem;
+  row-gap: 1.6rem;
+}
+
+.field {
+  padding: 1.6rem;
+  background-color: #eee;
+}
+
+.fieldLabel {
+  margin-bottom: 0.8rem;
+}
+
+.fieldValue {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #000;
+}

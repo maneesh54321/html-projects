@@ -1,0 +1,22 @@
+.label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.formInput {
+  display: flex;
+  flex-direction: column;
+}
+
+.formInput input {
+  padding: 1rem;
+  font-size: 1.6rem;
+  border-radius: 9px;
+  border: 1px solid #ddd;
+}
+
+.formInput input:focus {
+  border: 1px solid #fc6c4c;
+  outline: 1px solid #fc6c4c;
+}

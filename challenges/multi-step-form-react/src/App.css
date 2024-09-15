@@ -1,0 +1,15 @@
+.container {
+  max-width: 80rem;
+  margin: 10rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.multi-step-form-box {
+  width: 60rem;
+  background-color: #fff;
+  padding: 2.4rem;
+  border-radius: 11px;
+  box-shadow: 0 10px 20px 10px rgba(0, 0, 0, 0.1);
+}

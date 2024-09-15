@@ -1,0 +1,81 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+  background-color: #f3f3e2;
+}
+
+.primary-heading {
+  font-size: 3.2rem;
+  margin-bottom: 1.6rem;
+}
+
+.btn {
+  padding: 1.2rem 2.4rem;
+  color: #fff;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+.btn-full {
+  background-color: #fc6c4c;
+}
+
+.btn-outline {
+  background-color: #fff;
+  color: #555;
+  border: 1px solid #fc6c4c;
+}
+
+.formHeading {
+  font-size: 2rem;
+  font-weight: 500;
+
+  margin-bottom: 1.2rem;
+}
+
+.formDescription {
+  font-size: 1.4rem;
+  margin-bottom: 3.2rem;
+}
+
+.motivation-text {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  margin-bottom: 2.4rem;
+}
+
+/* **************************** */
+/* MULTI STEP FORM */
+/* **************************** */
+
+.form-header {
+  border-bottom: 1px solid #ddd;
+  padding: 2.4rem 0;
+}
+
+.form-body {
+  padding: 4.8rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.form-footer {
+  padding: 3.2rem 0 0 0;
+  display: flex;
+}
+
+.next-btn {
+  margin-left: auto;
+}
