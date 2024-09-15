@@ -31,7 +31,7 @@ body {
   font-family: "Inter", sans-serif;
   font-weight: 400;
   color: #9c9c9d;
-  background-color: #07080a;
+  background-color: rgb(2, 2, 3, 1);
 }
 
 .text-center {
@@ -69,6 +69,10 @@ body {
 
 .mb-lg {
   margin-bottom: 16rem;
+}
+
+.mb-xl {
+  margin-bottom: 25.6rem;
 }
 
 .container-md {
@@ -161,7 +165,8 @@ li.home {
 
 .hero-section {
   height: 100vh;
-  background-image: url("../assets/hero/background.2dff3c1b.jpg");
+  background-image: linear-gradient(to top, rgb(2, 2, 3, 1), rgb(2, 2, 3, 0)),
+    url(../assets/hero/background.2dff3c1b.jpg);
   background-size: cover;
 
   display: flex;
@@ -268,7 +273,7 @@ li.home {
 
 .work-style-text {
   font-size: 1.6rem;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .work-style-text:not(:last-child) {
@@ -330,7 +335,7 @@ li.home {
 }
 
 /* *********************************** */
-/* OUR BENEFITS SECTION */
+/* OPEN POSITIONS SECTION */
 /* *********************************** */
 
 .apply-job {
@@ -364,17 +369,23 @@ li.home {
 /* *********************************** */
 
 .section-hiring {
-  background-image: linear-gradient(240deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),
+  background-image: linear-gradient(
+      to top,
+      rgb(2, 2, 3, 1) 5%,
+      rgb(2, 2, 3, 0) 86%,
+      rgb(2, 2, 3, 1)
+    ),
+    linear-gradient(
+      to right,
+      rgb(2, 2, 3, 0.6) 5%,
+      rgb(2, 2, 3, 0) 80%,
+      rgb(2, 2, 3, 1)
+    ),
     url(../assets/hiring-process-background.b1cd24e3.jpg);
   background-size: cover;
-  /* mask-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.8) 10%,
-    rgba(0, 0, 0, 0.1) 100%,
-    rgba(0, 0, 0, 0.2) 10%
-  );*/
-  /* Adjust the gradient direction and color stops as needed */
-  /* mask-size: cover;  */
+  max-width: 103rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hiring-process {
@@ -551,32 +562,35 @@ li.home {
   opacity: 1;
 }
 
-.description {
+.description-card {
   position: absolute;
   top: 0;
   left: 0;
   width: 30rem;
   transform: translate(-37.5%, calc(-100% - 1.6rem));
-  background-color: #1e1a25;
+  background-color: #181425;
   padding: 3.2rem;
   border-radius: 11px;
   text-align: left;
-  display: none;
-}
 
-.individual-box:hover .description {
-  display: block;
+  display: none;
 }
 
 .individual-title {
   font-size: 1.6rem;
-  font-weight: 500;
+  font-weight: 600;
   color: #fff;
   margin-bottom: 1.6rem;
 }
 
 .individual-description {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.individual-box:hover .description-card {
+  display: block;
 }
 
 /* *********************************** */
@@ -747,5 +761,183 @@ li.home {
 }
 
 /* *********************************** */
-/* TEAM MEMBERS SECTION */
+/* SOCIAL NETWORK SECTION */
 /* *********************************** */
+
+.section-social-network {
+  padding: 9.6rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4.8rem;
+  justify-items: end;
+}
+
+.section-social-header {
+  grid-column: 1/-1;
+  width: 100%;
+}
+
+.header-social {
+  max-width: 48.6rem;
+  margin: 0 auto;
+}
+
+.title-social {
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-bottom: 0;
+  color: #fff;
+}
+
+.text-social {
+  font-size: 2rem;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+}
+
+.social-handle-card {
+  border: 1px solid #333;
+  border-radius: 11px;
+  background-color: #0e0f11;
+  padding: 2.4rem;
+  max-width: 47rem;
+  cursor: pointer;
+}
+
+.social-handle-card--2 {
+  justify-self: start;
+}
+
+.social-handle-card:hover {
+  background: #161718;
+}
+
+.action-arrow {
+  display: inline-block;
+  transition: transform 0.2s;
+}
+
+.social-handle-card:hover .action-arrow {
+  transform: translateX(0.5rem);
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  margin-bottom: 1.6rem;
+}
+
+.social-handle-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.social-handle-name {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+.social-handle-members {
+  font-size: 1.4rem;
+  margin-left: auto;
+  letter-spacing: 0.25px;
+}
+
+.social-handle-card .body {
+  margin-bottom: 1.6rem;
+}
+
+.social-handle-text {
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+.handle-action:link,
+.handle-action:visited {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+/* .social-handle:link,
+.social-handle:visited {
+  text-decoration: none;
+  display: block;
+} */
+
+/* *********************************** */
+/* SOCIAL NETWORK SECTION */
+/* *********************************** */
+
+.footer {
+  position: relative;
+  padding-top: 21rem;
+}
+
+.sitemap-table {
+  /* padding: 15.6rem 0; */
+  padding: 9.6rem;
+  background: linear-gradient(180deg, rgba(7, 8, 10, 0.8) 0.1%, #07080a 32.45%)
+      padding-box,
+    radial-gradient(
+        49.41% 64.58% at 49.4% 0,
+        hsla(0, 0%, 100%, 0.03) 0,
+        hsla(0, 0%, 100%, 0) 100%
+      )
+      padding-box;
+  backdrop-filter: blur(20px);
+
+  display: flex;
+  padding: 8rem;
+  justify-content: space-between;
+}
+
+.sitemap-col-heading {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 4.8rem;
+}
+
+.sitemap-col {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sitemap-link:link,
+.sitemap-link:visited {
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s;
+}
+
+.sitemap-link:hover,
+.sitemap-link:active {
+  color: #fff;
+}
+
+.new-page-link {
+  margin-left: 0.8rem;
+  height: 1rem;
+  width: 1rem;
+}
+
+.footer .bg-image {
+  position: absolute;
+  height: 90rem;
+  top: -10%;
+  left: 50%;
+  transform: rotate(85deg) translate(0, 50%);
+}
+
+.subscription {
+  width: 90%;
+  margin: 0 auto;
+}
