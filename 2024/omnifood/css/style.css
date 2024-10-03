@@ -626,6 +626,11 @@
   color: #555;
 }
 
+.contacts .address,
+.contacts .footer-link {
+  line-height: 1.6;
+}
+
 .social-links {
   list-style: none;
   display: flex;
